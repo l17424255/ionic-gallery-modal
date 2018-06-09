@@ -33,7 +33,7 @@ export class GalleryModal implements OnInit {
     visibility: 'hidden',
   };
   private modalStyle: any = {
-    backgroundColor: 'rgba(0, 0, 0, 1)',
+    backgroundColor: 'rgba(0, 0, 0, 1) !important',
   };
 
   private transitionDuration: string = '200ms';
@@ -148,7 +148,7 @@ export class GalleryModal implements OnInit {
 
     this.slidesStyle.transform = `translate(0, ${event.deltaY}px) scale(${scale})`;
     this.slidesStyle.opacity = opacity;
-    this.modalStyle.backgroundColor = `rgba(0, 0, 0, ${backgroundOpacity})`;
+    this.modalStyle.backgroundColor = `rgba(0, 0, 0, ${backgroundOpacity}) !important`;
 
     delete this.slidesStyle.transitionProperty;
     delete this.slidesStyle.transitionDuration;
@@ -184,7 +184,7 @@ export class GalleryModal implements OnInit {
 
       this.slidesStyle.transform = 'none';
       this.slidesStyle.opacity = 1;
-      this.modalStyle.backgroundColor = 'rgba(0, 0, 0, 1)';
+      this.modalStyle.backgroundColor = 'rgba(0, 0, 0, 1) !important';
     }
   }
 }
